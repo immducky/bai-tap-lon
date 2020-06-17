@@ -1,3 +1,3 @@
-E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/CMakeFiles/ChiSoDien.dir
-E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/CMakeFiles/ChiSoDien.dir
+E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/CMakeFiles/rebuild_cache.dir

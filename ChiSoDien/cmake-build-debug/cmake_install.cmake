@@ -1,4 +1,4 @@
-# Install script for directory: E:/bai_tap_lon/src/ChiSoDien
+# Install script for directory: E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

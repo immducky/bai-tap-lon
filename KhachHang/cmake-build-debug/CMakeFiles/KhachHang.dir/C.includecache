@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/bai_tap_lon/src/bai-tap-lon/KhachHang/KhachHang.c
+stdio.h
+-
+stdlib.h
+-
+KhachHang.h
+E:/bai_tap_lon/src/bai-tap-lon/KhachHang/KhachHang.h
+../Utils/Utils.h
+E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.h
+
+E:/bai_tap_lon/src/bai-tap-lon/KhachHang/KhachHang.h
+
+E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.h
+

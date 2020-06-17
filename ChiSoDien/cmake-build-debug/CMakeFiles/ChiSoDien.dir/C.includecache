@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/ChiSoDien.c
+stdio.h
+-
+stdlib.h
+-
+ChiSoDien.h
+E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/ChiSoDien.h
+../Utils/Utils.h
+E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.h
+
+E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/ChiSoDien.h
+
+E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/ChiSoDien_test.c
+stdio.h
+-
+stdlib.h
+-
+ChiSoDien.h
+E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/ChiSoDien.h
+
+E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c
+stdio.h
+-
+Utils.h
+E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.h
+
+E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.h
+

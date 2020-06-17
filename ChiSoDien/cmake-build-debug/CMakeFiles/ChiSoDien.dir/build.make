@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\bai_tap_lon\src\ChiSoDien
+CMAKE_SOURCE_DIR = E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\bai_tap_lon\src\ChiSoDien\cmake-build-debug
+CMAKE_BINARY_DIR = E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ChiSoDien.dir/depend.make
@@ -59,46 +59,62 @@ include CMakeFiles/ChiSoDien.dir/flags.make
 CMakeFiles/ChiSoDien.dir/ChiSoDien.c.obj: CMakeFiles/ChiSoDien.dir/flags.make
 CMakeFiles/ChiSoDien.dir/ChiSoDien.c.obj: CMakeFiles/ChiSoDien.dir/includes_C.rsp
 CMakeFiles/ChiSoDien.dir/ChiSoDien.c.obj: ../ChiSoDien.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\bai_tap_lon\src\ChiSoDien\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ChiSoDien.dir/ChiSoDien.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ChiSoDien.dir\ChiSoDien.c.obj   -c E:\bai_tap_lon\src\ChiSoDien\ChiSoDien.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ChiSoDien.dir/ChiSoDien.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ChiSoDien.dir\ChiSoDien.c.obj   -c E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\ChiSoDien.c
 
 CMakeFiles/ChiSoDien.dir/ChiSoDien.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ChiSoDien.dir/ChiSoDien.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\bai_tap_lon\src\ChiSoDien\ChiSoDien.c > CMakeFiles\ChiSoDien.dir\ChiSoDien.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\ChiSoDien.c > CMakeFiles\ChiSoDien.dir\ChiSoDien.c.i
 
 CMakeFiles/ChiSoDien.dir/ChiSoDien.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ChiSoDien.dir/ChiSoDien.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\bai_tap_lon\src\ChiSoDien\ChiSoDien.c -o CMakeFiles\ChiSoDien.dir\ChiSoDien.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\ChiSoDien.c -o CMakeFiles\ChiSoDien.dir\ChiSoDien.c.s
 
 CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.obj: CMakeFiles/ChiSoDien.dir/flags.make
 CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.obj: CMakeFiles/ChiSoDien.dir/includes_C.rsp
 CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.obj: ../ChiSoDien_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\bai_tap_lon\src\ChiSoDien\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ChiSoDien.dir\ChiSoDien_test.c.obj   -c E:\bai_tap_lon\src\ChiSoDien\ChiSoDien_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ChiSoDien.dir\ChiSoDien_test.c.obj   -c E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\ChiSoDien_test.c
 
 CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\bai_tap_lon\src\ChiSoDien\ChiSoDien_test.c > CMakeFiles\ChiSoDien.dir\ChiSoDien_test.c.i
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\ChiSoDien_test.c > CMakeFiles\ChiSoDien.dir\ChiSoDien_test.c.i
 
 CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\bai_tap_lon\src\ChiSoDien\ChiSoDien_test.c -o CMakeFiles\ChiSoDien.dir\ChiSoDien_test.c.s
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\ChiSoDien_test.c -o CMakeFiles\ChiSoDien.dir\ChiSoDien_test.c.s
+
+CMakeFiles/ChiSoDien.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj: CMakeFiles/ChiSoDien.dir/flags.make
+CMakeFiles/ChiSoDien.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj: CMakeFiles/ChiSoDien.dir/includes_C.rsp
+CMakeFiles/ChiSoDien.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj: E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ChiSoDien.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\ChiSoDien.dir\E_\bai_tap_lon\src\bai-tap-lon\Utils\Utils.c.obj   -c E:\bai_tap_lon\src\bai-tap-lon\Utils\Utils.c
+
+CMakeFiles/ChiSoDien.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ChiSoDien.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\bai_tap_lon\src\bai-tap-lon\Utils\Utils.c > CMakeFiles\ChiSoDien.dir\E_\bai_tap_lon\src\bai-tap-lon\Utils\Utils.c.i
+
+CMakeFiles/ChiSoDien.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ChiSoDien.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\bai_tap_lon\src\bai-tap-lon\Utils\Utils.c -o CMakeFiles\ChiSoDien.dir\E_\bai_tap_lon\src\bai-tap-lon\Utils\Utils.c.s
 
 # Object files for target ChiSoDien
 ChiSoDien_OBJECTS = \
 "CMakeFiles/ChiSoDien.dir/ChiSoDien.c.obj" \
-"CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.obj"
+"CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.obj" \
+"CMakeFiles/ChiSoDien.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj"
 
 # External object files for target ChiSoDien
 ChiSoDien_EXTERNAL_OBJECTS =
 
 ChiSoDien.exe: CMakeFiles/ChiSoDien.dir/ChiSoDien.c.obj
 ChiSoDien.exe: CMakeFiles/ChiSoDien.dir/ChiSoDien_test.c.obj
+ChiSoDien.exe: CMakeFiles/ChiSoDien.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj
 ChiSoDien.exe: CMakeFiles/ChiSoDien.dir/build.make
 ChiSoDien.exe: CMakeFiles/ChiSoDien.dir/linklibs.rsp
 ChiSoDien.exe: CMakeFiles/ChiSoDien.dir/objects1.rsp
 ChiSoDien.exe: CMakeFiles/ChiSoDien.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\bai_tap_lon\src\ChiSoDien\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable ChiSoDien.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable ChiSoDien.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ChiSoDien.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -111,6 +127,6 @@ CMakeFiles/ChiSoDien.dir/clean:
 .PHONY : CMakeFiles/ChiSoDien.dir/clean
 
 CMakeFiles/ChiSoDien.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\bai_tap_lon\src\ChiSoDien E:\bai_tap_lon\src\ChiSoDien E:\bai_tap_lon\src\ChiSoDien\cmake-build-debug E:\bai_tap_lon\src\ChiSoDien\cmake-build-debug E:\bai_tap_lon\src\ChiSoDien\cmake-build-debug\CMakeFiles\ChiSoDien.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\cmake-build-debug E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\cmake-build-debug E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien\cmake-build-debug\CMakeFiles\ChiSoDien.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ChiSoDien.dir/depend
 

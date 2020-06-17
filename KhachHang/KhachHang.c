@@ -47,11 +47,10 @@ int LuuFile(KhachHang *kh, int n, char ten_file[]) {
 }
 
 int DocFile(KhachHang **kh, int *n, char ten_file[]) {
-    FILE *fp = fopen(ten_file, "rb");
-    printf("Ten file la: %s\n", ten_file);
+    FILE *fp = fopen(ten_file, "wb+");
 
     if (fp == NULL) {
-        printf("Khong mo duoc file de doc");
+        printf("Khong mo duoc file de doc\n");
         return -1;
     }
 
@@ -64,7 +63,7 @@ int DocFile(KhachHang **kh, int *n, char ten_file[]) {
     if (temp != NULL) {
         *kh = temp;
     } else {
-        printf("Loi khi goi ham realloc");
+        printf("Loi khi goi ham realloc\n");
         free(kh);
         exit(1);
     }

@@ -12,5 +12,6 @@ typedef struct {
 KhachHang NhapKhachHang();
 int LuuFile(KhachHang *kh, int n, char ten_file[]);
 int DocFile(KhachHang **kh, int *n, char ten_file[]);
+int XoaKhachHang(char ten_file[], int ma_so_khach_hang);
 
 #endif /* end of include guard */

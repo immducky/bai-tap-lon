@@ -15,15 +15,15 @@ int main(void)
         } while(kh[i].ma_khach_hang == -1);
     }
 
-    if (LuuFile(kh, n, "./TestWrite.bin") == -1) {
-        printf("Loi luu file");
+    if (LuuFile(kh, n, "TestWrite.bin") == -1) {
+        printf("Loi luu file\n");
         return 0;
     }
 
     int size;
     KhachHang *docKH = calloc(1, sizeof *docKH);
-    if (DocFile(&docKH, &size, "./Test.bin") == -1) {
-        printf("Loi doc file");
+    if (DocFile(&docKH, &size, "Test.bin") == -1) {
+        printf("Loi doc file\n");
         return 0;
     }
 
@@ -32,6 +32,5 @@ int main(void)
 
     free(kh);
     free(docKH);
-    getch();
     return 0;
 }

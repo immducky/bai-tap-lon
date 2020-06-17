@@ -8,84 +8,92 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug"/>
+				<Option working_dir="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ChiSoDien">
-				<Option output="E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/ChiSoDien.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug"/>
+				<Option output="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/ChiSoDien.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="E:/bai_tap_lon/src/ChiSoDien/."/>
+					<Add directory="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/."/>
+					<Add directory="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/../Utils"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 ChiSoDien"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 ChiSoDien"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ChiSoDien/fast">
-				<Option output="E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/ChiSoDien.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug"/>
+				<Option output="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/ChiSoDien.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="E:/bai_tap_lon/src/ChiSoDien/."/>
+					<Add directory="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/."/>
+					<Add directory="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/../Utils"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../include"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 ChiSoDien/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 ChiSoDien/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug"/>
+				<Option working_dir="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug"/>
+				<Option working_dir="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/bai_tap_lon/src/ChiSoDien/ChiSoDien.c">
+		<Unit filename="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/ChiSoDien.c">
 			<Option target="ChiSoDien"/>
 		</Unit>
-		<Unit filename="E:/bai_tap_lon/src/ChiSoDien/ChiSoDien.h">
+		<Unit filename="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/ChiSoDien.h">
 			<Option target="ChiSoDien"/>
 		</Unit>
-		<Unit filename="E:/bai_tap_lon/src/ChiSoDien/ChiSoDien_test.c">
+		<Unit filename="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/ChiSoDien_test.c">
 			<Option target="ChiSoDien"/>
 		</Unit>
-		<Unit filename="E:/bai_tap_lon/src/ChiSoDien/CMakeLists.txt">
+		<Unit filename="E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c">
+			<Option target="ChiSoDien"/>
+		</Unit>
+		<Unit filename="E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.h">
+			<Option target="ChiSoDien"/>
+		</Unit>
+		<Unit filename="E:/bai_tap_lon/src/bai-tap-lon/ChiSoDien/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
