@@ -50,6 +50,11 @@ int DocFile(KhachHang **kh, int *n, char ten_file[]) {
     FILE *fp = fopen(ten_file, "rb");
     printf("Ten file la: %s\n", ten_file);
 
+    if (fp == NULL) {
+        printf("Khong mo duoc file de doc");
+        return -1;
+    }
+
     if (fread(&n, sizeof(*n), 1, fp) != 1) {
         printf("Loi doc so luong\n");
         return -1;

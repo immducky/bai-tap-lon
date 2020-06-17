@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/Utils/Utils.c.obj"
+  "CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj"
   "CMakeFiles/KhachHang.dir/KhachHang.c.obj"
   "CMakeFiles/KhachHang.dir/KhachHang_test.c.obj"
   "KhachHang.exe"

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "E:/bai_tap_lon/src/Utils/Utils.c" "E:/bai_tap_lon/src/KhachHang/cmake-build-debug/CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/Utils/Utils.c.obj"
-  "E:/bai_tap_lon/src/KhachHang/KhachHang.c" "E:/bai_tap_lon/src/KhachHang/cmake-build-debug/CMakeFiles/KhachHang.dir/KhachHang.c.obj"
-  "E:/bai_tap_lon/src/KhachHang/KhachHang_test.c" "E:/bai_tap_lon/src/KhachHang/cmake-build-debug/CMakeFiles/KhachHang.dir/KhachHang_test.c.obj"
+  "E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c" "E:/bai_tap_lon/src/bai-tap-lon/KhachHang/cmake-build-debug/CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj"
+  "E:/bai_tap_lon/src/bai-tap-lon/KhachHang/KhachHang.c" "E:/bai_tap_lon/src/bai-tap-lon/KhachHang/cmake-build-debug/CMakeFiles/KhachHang.dir/KhachHang.c.obj"
+  "E:/bai_tap_lon/src/bai-tap-lon/KhachHang/KhachHang_test.c" "E:/bai_tap_lon/src/bai-tap-lon/KhachHang/cmake-build-debug/CMakeFiles/KhachHang.dir/KhachHang_test.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\bai_tap_lon\src\KhachHang
+CMAKE_SOURCE_DIR = E:\bai_tap_lon\src\bai-tap-lon\KhachHang
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\bai_tap_lon\src\KhachHang\cmake-build-debug
+CMAKE_BINARY_DIR = E:\bai_tap_lon\src\bai-tap-lon\KhachHang\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\bai_tap_lon\src\KhachHang\cmake-build-debug\CMakeFiles E:\bai_tap_lon\src\KhachHang\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\bai_tap_lon\src\bai-tap-lon\KhachHang\cmake-build-debug\CMakeFiles E:\bai_tap_lon\src\bai-tap-lon\KhachHang\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\bai_tap_lon\src\KhachHang\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start E:\bai_tap_lon\src\bai-tap-lon\KhachHang\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,32 +122,32 @@ KhachHang/fast:
 	$(MAKE) -f CMakeFiles\KhachHang.dir\build.make CMakeFiles/KhachHang.dir/build
 .PHONY : KhachHang/fast
 
-E_/bai_tap_lon/src/Utils/Utils.obj: E_/bai_tap_lon/src/Utils/Utils.c.obj
+E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.obj: E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj
 
-.PHONY : E_/bai_tap_lon/src/Utils/Utils.obj
+.PHONY : E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.obj
 
 # target to build an object file
-E_/bai_tap_lon/src/Utils/Utils.c.obj:
-	$(MAKE) -f CMakeFiles\KhachHang.dir\build.make CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/Utils/Utils.c.obj
-.PHONY : E_/bai_tap_lon/src/Utils/Utils.c.obj
+E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj:
+	$(MAKE) -f CMakeFiles\KhachHang.dir\build.make CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj
+.PHONY : E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj
 
-E_/bai_tap_lon/src/Utils/Utils.i: E_/bai_tap_lon/src/Utils/Utils.c.i
+E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.i: E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.i
 
-.PHONY : E_/bai_tap_lon/src/Utils/Utils.i
+.PHONY : E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.i
 
 # target to preprocess a source file
-E_/bai_tap_lon/src/Utils/Utils.c.i:
-	$(MAKE) -f CMakeFiles\KhachHang.dir\build.make CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/Utils/Utils.c.i
-.PHONY : E_/bai_tap_lon/src/Utils/Utils.c.i
+E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.i:
+	$(MAKE) -f CMakeFiles\KhachHang.dir\build.make CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.i
+.PHONY : E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.i
 
-E_/bai_tap_lon/src/Utils/Utils.s: E_/bai_tap_lon/src/Utils/Utils.c.s
+E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.s: E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.s
 
-.PHONY : E_/bai_tap_lon/src/Utils/Utils.s
+.PHONY : E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.s
 
 # target to generate assembly for a file
-E_/bai_tap_lon/src/Utils/Utils.c.s:
-	$(MAKE) -f CMakeFiles\KhachHang.dir\build.make CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/Utils/Utils.c.s
-.PHONY : E_/bai_tap_lon/src/Utils/Utils.c.s
+E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.s:
+	$(MAKE) -f CMakeFiles\KhachHang.dir\build.make CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.s
+.PHONY : E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.s
 
 KhachHang.obj: KhachHang.c.obj
 
@@ -212,9 +212,9 @@ help:
 	@echo ... KhachHang
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... E_/bai_tap_lon/src/Utils/Utils.obj
-	@echo ... E_/bai_tap_lon/src/Utils/Utils.i
-	@echo ... E_/bai_tap_lon/src/Utils/Utils.s
+	@echo ... E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.obj
+	@echo ... E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.i
+	@echo ... E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.s
 	@echo ... KhachHang.obj
 	@echo ... KhachHang.i
 	@echo ... KhachHang.s
