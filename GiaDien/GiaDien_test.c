@@ -17,10 +17,12 @@ int main(void)
     printf("Gia cua muc tieu thu dien bac 1: %d", dien_nang_TT[n].don_gia);
     printf("\n");
 
-    if (LuuFile(dien_nang_TT, n, "./TestWrite.bin") == -1) {
+    int size = LuuFile(dien_nang_TT, n, "./TestWrite.bin");
+    if (size == -1) {
         printf("Loi luu file\n");
         return 0;
     }
+
     free(dien_nang_TT);
     return 0;
 }
