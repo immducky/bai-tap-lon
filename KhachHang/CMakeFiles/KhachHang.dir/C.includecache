@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang/KhachHang.c
+stdio.h
+-
+stdlib.h
+-
+KhachHang.h
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang/KhachHang.h
+../Utils/Utils.h
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.h
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang/KhachHang.h
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang/KhachHang_test.c
+stdio.h
+-
+stdlib.h
+-
+KhachHang.h
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang/KhachHang.h
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.h
+

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 #include "KhachHang.h"
 
 int main(void)
@@ -15,15 +14,14 @@ int main(void)
         } while(kh[i].ma_khach_hang == -1);
     }
 
-    if (LuuFile(kh, n, "TestWrite.bin") == -1) {
-        printf("Loi luu file\n");
+    if (LuuFile(kh, n, "./TestWrite.bin") == -1) {
+        printf("Loi luu file");
         return 0;
     }
 
-    int size;
     KhachHang *docKH = calloc(1, sizeof *docKH);
-    if (DocFile(&docKH, &size, "Test.bin") == -1) {
-        printf("Loi doc file\n");
+    if (DocFile("./Test.bin", &docKH) == -1) {
+        printf("Loi doc file");
         return 0;
     }
 

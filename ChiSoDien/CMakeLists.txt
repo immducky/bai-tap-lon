@@ -6,4 +6,4 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 include_directories(../Utils)
 
-add_executable(ChiSoDien ChiSodien.c ChiSoDien_test.c ../Utils/Utils.c)
+add_executable(ChiSoDien ChiSoDien.c ChiSoDien_test.c ../Utils/Utils.c)
