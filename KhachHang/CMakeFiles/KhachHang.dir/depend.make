@@ -3,11 +3,11 @@
 
 CMakeFiles/KhachHang.dir/KhachHang.c.o: KhachHang.c
 CMakeFiles/KhachHang.dir/KhachHang.c.o: KhachHang.h
-CMakeFiles/KhachHang.dir/KhachHang.c.o: /home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.h
+CMakeFiles/KhachHang.dir/KhachHang.c.o: /home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.h
 
 CMakeFiles/KhachHang.dir/KhachHang_test.c.o: KhachHang.h
 CMakeFiles/KhachHang.dir/KhachHang_test.c.o: KhachHang_test.c
 
-CMakeFiles/KhachHang.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.o: /home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c
-CMakeFiles/KhachHang.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.o: /home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.h
+CMakeFiles/KhachHang.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.o: /home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c
+CMakeFiles/KhachHang.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.o: /home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.h
 

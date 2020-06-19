@@ -6,5 +6,5 @@ C_FLAGS =   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang/. -I/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang/../Utils 
+C_INCLUDES = -I/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/. -I/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/../Utils 
 
