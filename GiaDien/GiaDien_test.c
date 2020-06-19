@@ -1,5 +1,5 @@
 //
-// Created by Administrator on 17-Jun-20.
+// Created by Lang Khoang on 17-Jun-20.
 //
 
 #include <stdio.h>
@@ -8,15 +8,14 @@
 
 int main(void)
 {
-    size_t n = 2;
+    enum Bac bac;
+    int n = 1;
+    const char *SoBac[] = {"", "1", "2", "3", "4", "5", "6"};
     GiaDien *dien_nang_TT = calloc(n, sizeof *dien_nang_TT);
-    for (int i = 0; i < n; i++) {
-        do{
-            dien_nang_TT[i] = NhapGiaDien();
-            printf("So dien nang tieu thu la: %d\n", dien_nang_TT[i].so_dien_nang_tieu_thu);
-            printf("\n");
-        } while(dien_nang_TT[i].so_dien_nang_tieu_thu == -1);
-    }
+    dien_nang_TT[n] = NhapGiaDien();
+    //sai sai nhung ke =))
+    printf("Gia cua muc tieu thu dien bac 1: %d", dien_nang_TT[n].don_gia);
+    printf("\n");
 
     if (LuuFile(dien_nang_TT, n, "./TestWrite.bin") == -1) {
         printf("Loi luu file\n");

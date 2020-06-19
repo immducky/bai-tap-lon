@@ -6,17 +6,13 @@
 
 #IncludeRegexTransform: 
 
-E:/bai_tap_lon/src/bai-tap-lon/GiaDien/GiaDien.c
+E:/bai_tap_lon/src/bai-tap-lon/GiaDien/GiaDien.h
+
+E:/bai_tap_lon/src/bai-tap-lon/GiaDien/GiaDien_test.c
 stdio.h
 -
 stdlib.h
 -
 GiaDien.h
 E:/bai_tap_lon/src/bai-tap-lon/GiaDien/GiaDien.h
-../Utils/Utils.h
-E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.h
-
-E:/bai_tap_lon/src/bai-tap-lon/GiaDien/GiaDien.h
-
-E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.h
 
