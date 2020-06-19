@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/GiaDien/GiaDien.c
+stdio.h
+-
+stdlib.h
+-
+GiaDien.h
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/GiaDien/GiaDien.h
+../Utils/Utils.h
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.h
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/GiaDien/GiaDien.h
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/GiaDien/GiaDien_test.c
+stdio.h
+-
+stdlib.h
+-
+GiaDien.h
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/GiaDien/GiaDien.h
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c
+stdio.h
+-
+Utils.h
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.h
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.h
+

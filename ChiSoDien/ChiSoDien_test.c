@@ -19,19 +19,19 @@ int main(void)
         return 0;
     }
 
-/*
- *    int size;
- *    ChiSoDien *docKH = calloc(1, sizeof *docKH);
- *    if (DocFile("./Test.bin", &docKH, &size) == -1) {
- *        printf("Loi doc file");
- *        return 0;
- *    }
- *
- *    printf("Ma so khach hang thu nhat la: %d\n", docKH[0].ma_khach_hang);
- *    printf("Ten khach hang thu 2 la: %s\n", docKH[1].chi_so_dien);
- *
- *    free(docKH);
- */
+    int size;
+    ChiSoDien *docKH = calloc(0, sizeof *docKH);
+    size = DocFile("./Test.bin", &docKH);
+    if (size == -1) {
+        printf("Loi doc file");
+        return 0;
+    }
+
+    printf("So luong doc duoc la: %d\n", size);
+    printf("Ma so khach hang thu nhat la: %d\n", docKH[0].ma_khach_hang);
+    printf("Ten khach hang thu 2 la: %d\n", docKH[1].ma_khach_hang);
+
+    free(docKH);
 
     free(kh);
     return 0;

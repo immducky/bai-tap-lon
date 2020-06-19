@@ -10,8 +10,17 @@ typedef struct {
 } KhachHang;
 
 KhachHang NhapKhachHang();
-int LuuFile(KhachHang *kh, int n, char ten_file[]);
-int DocFile(KhachHang **kh, int *n, char ten_file[]);
-int XoaKhachHang(char ten_file[], int ma_so_khach_hang);
+
+/*
+ * @detail Luu struct vao file voi do dai size
+ * @return tra ve 0 neu khong co loi va -1 neu viec luu bi loi
+ */
+int LuuFile(KhachHang *kh, size_t size, char ten_file[]);
+
+/*
+ * @detail doc tu ten file roi viet vao heap khach hang da duoc malloc truoc
+ * @return tra ve so luong bien struct ma no doc duoc, neu bi loi se tra ve -1
+ */
+int DocFile(char ten_file[], KhachHang **kh);
 
 #endif /* end of include guard */

@@ -95,7 +95,8 @@ int LuuFile(ChiSoDien *chi_so, int n, char ten_file[]) {
     return 0;
 }
 
-int DocFile(char ten_file[], ChiSoDien **chi_so, int *n) {
+int DocFile(char ten_file[], ChiSoDien **chi_so) {
+    int n;
     FILE *file;
 
     file = fopen(ten_file, "rb");
@@ -103,12 +104,12 @@ int DocFile(char ten_file[], ChiSoDien **chi_so, int *n) {
         printf("");
         return -1;
     }
-    if (fread(n, sizeof(*n), 1, file) != 1) {
+    if (fread(&n, sizeof(n), 1, file) != 1) {
         printf("");
         return -1;
     }
 
-    ChiSoDien *temp = realloc(*chi_so, *n * sizeof(ChiSoDien));
+    ChiSoDien *temp = realloc(*chi_so, n * sizeof(ChiSoDien));
     if (temp == NULL) {
         printf("Loi chi_soi goi ham realloc");
         free(*chi_so);
@@ -116,11 +117,11 @@ int DocFile(char ten_file[], ChiSoDien **chi_so, int *n) {
     } else {
         *chi_so = temp;
     }
-    if (fread(*chi_so, sizeof(ChiSoDien), *n, file) != *n) {
-        printf("");
+    if (fread(*chi_so, sizeof(ChiSoDien), n, file) != n) {
+        printf("Loi khi viet vao chi_o");
         return -1;
     }
 
     fclose(file);
-    return 0;
+    return n;
 }

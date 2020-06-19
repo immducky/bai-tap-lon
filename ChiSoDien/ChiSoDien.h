@@ -13,7 +13,11 @@ typedef struct {
 
 ChiSoDien NhapChiSoDien();
 int LuuFile(ChiSoDien *chi_so, int n, char ten_file[]);
-int DocFile(char ten_file[], ChiSoDien **chi_so, int *n);
+/*
+ * @detail doc tu ten file va sau do luu vao chi_so sau do tra ve so luong doc duoc
+ * @return tra ve so luong struct ChiSoDien doc duoc va luu vao chi_so, Neu nhu bi loi se tra ve -1
+ */
+int DocFile(char ten_file[], ChiSoDien **chi_so);
 enum ky DoiSoThanhKy(int num);
 
 #endif /* end of include guard */
