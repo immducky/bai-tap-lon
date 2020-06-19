@@ -10,11 +10,6 @@ GiaDien NhapGiaDien() {
     const char *MucTieuThu[] = {"", "0 - 50", "51 - 100", "101 - 200", "201 - 300", "301 - 400", "> 400"};
     for (bac = Bac_1; bac <= Bac_6; bac++){
         printf("Nhap vao don gia cua bac %s (%s)kWh:", bac[SoBac], bac[MucTieuThu]);
-        /*if (NhapSo(&dien_nang_TT.so_dien_nang_tieu_thu) == -1) {
-            printf("Khong co muc tieu thu do. \nNhap that bai");
-            return dien_nang_TT;
-        }
-        printf("Nhap vao don gia: "); */
         if (NhapSo(&dien_nang_TT.don_gia) == -1) {
             printf("Nhap that bai");
             return dien_nang_TT;
