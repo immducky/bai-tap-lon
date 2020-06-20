@@ -8,8 +8,8 @@ typedef struct {
     enum Bac bac;
 } GiaDien;
 
-GiaDien NhapGiaDien();
+int NhapGiaDien();
 int LuuFile(GiaDien *dien_nang_TT, int n, char ten_file[]);
-int DocFile(char ten_file[], GiaDien **dien_nang_TT);
+int DocFile(char ten_file[], GiaDien **dien_nang_TT, int *n);
 
 #endif /* end of include guard */

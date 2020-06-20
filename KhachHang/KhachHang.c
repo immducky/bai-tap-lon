@@ -17,7 +17,7 @@ KhachHang NhapKhachHang() {
 
     printf("Nhap vao so cong to: ");
     if (NhapSo(&kh.ma_cong_to) == -1) {
-        printf("Nhap that bai");
+        perror("Nhap that bai: ");
         return kh;
     };
 
@@ -31,13 +31,13 @@ int LuuFile(KhachHang *kh, size_t size, char ten_file[]) {
     FILE *fp = fopen(ten_file, "wb");
 
     if (fwrite(&size, sizeof(size_t), 1, fp) != 1) {
-        printf("Loi Nhap vao khac hang\n");
+        perror("Loi Nhap vao khac hang: ");
         fclose(fp);
         return -1;
     }
 
     if (fwrite(kh, sizeof(KhachHang), size, fp) != size) {
-        printf("Loi Nhap vao khac hang\n");
+        perror("Loi Nhap vao khac hang: ");
         fclose(fp);
         return -1;
     }
@@ -52,12 +52,12 @@ int DocFile(char ten_file[], KhachHang **kh) {
 
     file = fopen(ten_file, "rb");
     if (file == NULL) {
-        printf("");
+        perror("Khong mo duoc file: ");
         return -1;
     }
 
     if (fread(&n, sizeof(n), 1, file) != 1) {
-        printf("");
+        perror("Khong the doc duoc file: ");
         return -1;
     }
 
@@ -65,12 +65,12 @@ int DocFile(char ten_file[], KhachHang **kh) {
     if (temp != NULL) {
         *kh = temp;
     } else {
-        printf("Loi khi goi ham realloc");
+        perror("Loi khi goi ham realloc: ");
         free(kh);
         exit(1);
     }
     if (fread(*kh, sizeof(KhachHang), n, file) != n) {
-        printf("");
+        perror("Khong doc duoc file: ");
         return -1;
     }
 

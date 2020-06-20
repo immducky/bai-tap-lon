@@ -1,1 +1,1 @@
-/usr/bin/cc    CMakeFiles/GiaDien.dir/GiaDien.c.o CMakeFiles/GiaDien.dir/GiaDien_test.c.o CMakeFiles/GiaDien.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.o  -o GiaDien 
+/usr/bin/cc -g   CMakeFiles/GiaDien.dir/GiaDien.c.o CMakeFiles/GiaDien.dir/GiaDien_test.c.o CMakeFiles/GiaDien.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.o  -o GiaDien 
