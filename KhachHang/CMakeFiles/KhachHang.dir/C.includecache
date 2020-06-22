@@ -6,13 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/KhachHang.h
-
-/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/KhachHang_test.c
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/KhachHang.c
 stdio.h
 -
 stdlib.h
 -
 KhachHang.h
 /home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/KhachHang.h
+../Utils/Utils.h
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.h
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/KhachHang.h
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/KhachHang_test.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+KhachHang.h
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/KhachHang.h
+
+/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.h
 

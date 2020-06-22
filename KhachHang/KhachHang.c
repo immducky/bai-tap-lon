@@ -75,12 +75,11 @@ int DocFile(char ten_file[], KhachHang **kh) {
     }
 
     fclose(file);
-
     return n;
 }
 
-int BoSungKhachHang(KhachHang *kh, int n, char ten_file[]) {
-    KhachHang *KH_tu_file = calloc(0, sizeof(KH_tu_file));
+int BoSungKhachHang(KhachHang *kh, size_t n, char ten_file[]) {
+    KhachHang *KH_tu_file = calloc(0, sizeof(KhachHang));
     int size = DocFile(ten_file, &KH_tu_file);
     if (size == -1) {
         printf("Khong doc duoc du lieu tu file\n");
@@ -110,7 +109,7 @@ int BoSungKhachHang(KhachHang *kh, int n, char ten_file[]) {
 }
 
 int XoaKhachHangKhoiFile(int pos, char ten_file[]) {
-    KhachHang *kh = (KhachHang *)calloc(0, sizeof(KhachHang));
+    KhachHang *kh = calloc(0, sizeof(KhachHang));
     int size = DocFile(ten_file, &kh);
     if (size == -1) {
         printf("Loi khi doc file\n");
@@ -136,4 +135,33 @@ int XoaKhachHangKhoiFile(int pos, char ten_file[]) {
     }
 
     free(kh);
+    return 0;
+}
+
+int SuaChuaKhachHang(int ma_khach_hang, char ten_file[] ,KhachHang kh) {
+    kh.ma_khach_hang = ma_khach_hang;
+    KhachHang *file_khach_hang = (KhachHang*)calloc(0, sizeof(KhachHang));
+    int size = DocFile(ten_file, &file_khach_hang);
+    if (size == -1) {
+        printf("Loi doc file\n");
+        free(file_khach_hang);
+        return -1;
+    }
+
+    if (ma_khach_hang >= size || ma_khach_hang <= 0) {
+        printf("Vi tri khong ton tai\n");
+        free(file_khach_hang);
+        return -1;
+    }
+
+    file_khach_hang[ma_khach_hang-1] = kh;
+
+    if (LuuFile(file_khach_hang, size, ten_file) == -1) {
+        printf("Khong Luu vao file duoc\n");
+        free(file_khach_hang);
+        return -1;
+    }
+
+    free(file_khach_hang);
+    return 0;
 }

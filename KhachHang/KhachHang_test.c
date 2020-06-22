@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 #include "KhachHang.h"
 
@@ -47,6 +48,16 @@ int main(void)
         return -1;
     }
 
+    KhachHang khach_hang_moi;
+    strcpy(khach_hang_moi.ten, "Day la ten them vao");
+    strcpy(khach_hang_moi.dia_chi, "day la dia chi them vao");
+    khach_hang_moi.ma_cong_to = 1;
+    if (SuaChuaKhachHang(2, "TestWrite.bin", khach_hang_moi) == -1) {
+        printf("Loi khi xoa khach hang khoi file\n");
+        return -1;
+    }
+
+    free(bo_sung);
     free(kh);
     free(docKH);
     return 0;
