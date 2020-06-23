@@ -23,4 +23,10 @@ int LuuFile(KhachHang *kh, size_t size, char ten_file[]);
  */
 int DocFile(char ten_file[], KhachHang **kh);
 
+int BoSungKhachHang(KhachHang *kh, size_t n, char ten_file[]);
+
+int XoaKhachHangKhoiFile(int pos, char ten_file[]);
+
+int SuaChuaKhachHang(int ma_khach_hang, char ten_file[] ,KhachHang kh);
+
 #endif /* end of include guard */
