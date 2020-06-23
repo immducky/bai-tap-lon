@@ -56,24 +56,10 @@ include CMakeFiles/KhachHang.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/KhachHang.dir/flags.make
 
-CMakeFiles/KhachHang.dir/KhachHang.c.obj: CMakeFiles/KhachHang.dir/flags.make
-CMakeFiles/KhachHang.dir/KhachHang.c.obj: CMakeFiles/KhachHang.dir/includes_C.rsp
-CMakeFiles/KhachHang.dir/KhachHang.c.obj: ../KhachHang.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\bai_tap_lon\src\bai-tap-lon\KhachHang\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/KhachHang.dir/KhachHang.c.obj"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\KhachHang.dir\KhachHang.c.obj   -c E:\bai_tap_lon\src\bai-tap-lon\KhachHang\KhachHang.c
-
-CMakeFiles/KhachHang.dir/KhachHang.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/KhachHang.dir/KhachHang.c.i"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\bai_tap_lon\src\bai-tap-lon\KhachHang\KhachHang.c > CMakeFiles\KhachHang.dir\KhachHang.c.i
-
-CMakeFiles/KhachHang.dir/KhachHang.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/KhachHang.dir/KhachHang.c.s"
-	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\bai_tap_lon\src\bai-tap-lon\KhachHang\KhachHang.c -o CMakeFiles\KhachHang.dir\KhachHang.c.s
-
 CMakeFiles/KhachHang.dir/KhachHang_test.c.obj: CMakeFiles/KhachHang.dir/flags.make
 CMakeFiles/KhachHang.dir/KhachHang_test.c.obj: CMakeFiles/KhachHang.dir/includes_C.rsp
 CMakeFiles/KhachHang.dir/KhachHang_test.c.obj: ../KhachHang_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\bai_tap_lon\src\bai-tap-lon\KhachHang\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/KhachHang.dir/KhachHang_test.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\bai_tap_lon\src\bai-tap-lon\KhachHang\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/KhachHang.dir/KhachHang_test.c.obj"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\KhachHang.dir\KhachHang_test.c.obj   -c E:\bai_tap_lon\src\bai-tap-lon\KhachHang\KhachHang_test.c
 
 CMakeFiles/KhachHang.dir/KhachHang_test.c.i: cmake_force
@@ -83,6 +69,20 @@ CMakeFiles/KhachHang.dir/KhachHang_test.c.i: cmake_force
 CMakeFiles/KhachHang.dir/KhachHang_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/KhachHang.dir/KhachHang_test.c.s"
 	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\bai_tap_lon\src\bai-tap-lon\KhachHang\KhachHang_test.c -o CMakeFiles\KhachHang.dir\KhachHang_test.c.s
+
+CMakeFiles/KhachHang.dir/KhachHang.c.obj: CMakeFiles/KhachHang.dir/flags.make
+CMakeFiles/KhachHang.dir/KhachHang.c.obj: CMakeFiles/KhachHang.dir/includes_C.rsp
+CMakeFiles/KhachHang.dir/KhachHang.c.obj: ../KhachHang.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\bai_tap_lon\src\bai-tap-lon\KhachHang\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/KhachHang.dir/KhachHang.c.obj"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\KhachHang.dir\KhachHang.c.obj   -c E:\bai_tap_lon\src\bai-tap-lon\KhachHang\KhachHang.c
+
+CMakeFiles/KhachHang.dir/KhachHang.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/KhachHang.dir/KhachHang.c.i"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E E:\bai_tap_lon\src\bai-tap-lon\KhachHang\KhachHang.c > CMakeFiles\KhachHang.dir\KhachHang.c.i
+
+CMakeFiles/KhachHang.dir/KhachHang.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/KhachHang.dir/KhachHang.c.s"
+	C:\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S E:\bai_tap_lon\src\bai-tap-lon\KhachHang\KhachHang.c -o CMakeFiles\KhachHang.dir\KhachHang.c.s
 
 CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj: CMakeFiles/KhachHang.dir/flags.make
 CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj: CMakeFiles/KhachHang.dir/includes_C.rsp
@@ -100,15 +100,15 @@ CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.s: cmake_f
 
 # Object files for target KhachHang
 KhachHang_OBJECTS = \
-"CMakeFiles/KhachHang.dir/KhachHang.c.obj" \
 "CMakeFiles/KhachHang.dir/KhachHang_test.c.obj" \
+"CMakeFiles/KhachHang.dir/KhachHang.c.obj" \
 "CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj"
 
 # External object files for target KhachHang
 KhachHang_EXTERNAL_OBJECTS =
 
-KhachHang.exe: CMakeFiles/KhachHang.dir/KhachHang.c.obj
 KhachHang.exe: CMakeFiles/KhachHang.dir/KhachHang_test.c.obj
+KhachHang.exe: CMakeFiles/KhachHang.dir/KhachHang.c.obj
 KhachHang.exe: CMakeFiles/KhachHang.dir/E_/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c.obj
 KhachHang.exe: CMakeFiles/KhachHang.dir/build.make
 KhachHang.exe: CMakeFiles/KhachHang.dir/linklibs.rsp

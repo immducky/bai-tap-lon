@@ -20,3 +20,11 @@ E:/bai_tap_lon/src/bai-tap-lon/KhachHang/KhachHang.h
 conio.h
 -
 
+E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.c
+stdio.h
+-
+Utils.h
+E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.h
+
+E:/bai_tap_lon/src/bai-tap-lon/Utils/Utils.h
+

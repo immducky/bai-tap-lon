@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = @CMakeFiles/KhachHang.exe.dir/includes_C.rsp
+C_INCLUDES = @CMakeFiles/KhachHang.c.dir/includes_C.rsp
 
