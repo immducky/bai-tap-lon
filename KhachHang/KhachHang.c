@@ -27,7 +27,7 @@ KhachHang NhapKhachHang() {
     return kh;
 }
 
-int LuuFile(KhachHang *kh, size_t size, char ten_file[]) {
+int LuuFileKhachHang(KhachHang *kh, size_t size, char ten_file[]) {
     FILE *fp = fopen(ten_file, "wb");
 
     if (fwrite(&size, sizeof(size_t), 1, fp) != 1) {
@@ -46,7 +46,7 @@ int LuuFile(KhachHang *kh, size_t size, char ten_file[]) {
     return 0;
 }
 
-int DocFile(char ten_file[], KhachHang **kh) {
+int DocFileKhachHang(char ten_file[], KhachHang **kh) {
     int n;
     FILE *file;
 
