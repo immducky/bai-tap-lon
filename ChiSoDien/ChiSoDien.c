@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "ChiSoDien.h"
 #include "../Utils/Utils.h"
-#include "../GiaDien/GiaDien.h"
 
 ChiSoDien NhapChiSoDien() {
     int num;
@@ -40,10 +39,9 @@ ChiSoDien NhapChiSoDien() {
         printf("Nhap that bai");
         return chi_so;
     }
-    ky_thu_phi = DoiSoThanhKy(num);
-    if (ky_thu_phi == ky_loi) {
+    if (num < 1 || num > 12) {
+        printf("Nhap vao ky khong ton tai");
         chi_so.ky_thu_phi = ky_loi;
-        printf("Nhap that bai");
         return chi_so;
     }
 
@@ -107,15 +105,36 @@ int KiemTraKyHopLe(int thang) {
     return 1;
 }
 
-int TinhDienNangTieuThu(ChiSoDien *chi_so, int ma_khach_hang, int thang) {
+int TinhDienNangTieuThu(int ma_khach_hang, int thang, char ten_file[]) {
+    int pos = -1;
+    ChiSoDien *chi_so = calloc(0, sizeof(ChiSoDien));
+    int size = DocFileChiSoDien(ten_file, &chi_so);
+    if (size == -1) {
+        printf("Loi doc file\n");
+        return -1;
+    }
+
     if (KiemTraKyHopLe(thang)) {
         printf("Nhap vao thang khong dung");
         return -1;
     }
 
-    if (thang == ky1) {
-        return
+    for (int i = 0; i < size; i++) {
+        if (chi_so[i].ma_khach_hang == ma_khach_hang) {
+            pos = i;
+        }
     }
 
-}
+    if (pos == -1) {
+        printf("Khong tim thay ma khach hang");
+        return -1;
+    }
 
+    if (thang == ky1) {
+        return chi_so[pos].chi_so_dien[0];
+    }
+
+    int chi_so_dien_TT = chi_so[pos].chi_so_dien[thang] - chi_so[pos].chi_so_dien[thang];
+    free(chi_so);
+    return chi_so_dien_TT;
+}
