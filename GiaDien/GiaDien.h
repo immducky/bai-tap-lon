@@ -10,6 +10,6 @@ typedef struct {
 
 GiaDien NhapGiaDien();
 int LuuFile(GiaDien *dien_nang_TT, int n, char ten_file[]);
-int DocFile(char ten_file[], GiaDien **dien_nang_TT, int *n);
+int DocFile(char ten_file[], GiaDien **dien_nang_TT);
 
 #endif /* end of include guard */
