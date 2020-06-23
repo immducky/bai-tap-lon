@@ -2,38 +2,7 @@
 #include <stdlib.h>
 #include "ChiSoDien.h"
 #include "../Utils/Utils.h"
-
-enum ky DoiSoThanhKy(int num) {
-    switch (num) {
-        case 1:
-            return ky1;
-        case 2:
-            return ky2;
-        case 3:
-            return ky3;
-        case 4:
-            return ky4;
-        case 5:
-            return ky5;
-        case 6:
-            return ky6;
-        case 7:
-            return ky7;
-        case 8:
-            return ky8;
-        case 9:
-            return ky9;
-        case 10:
-            return ky10;
-        case 11:
-            return ky11;
-        case 12:
-            return ky12;
-        default:
-            printf("Loi khong co ky do");
-            return ky_loi;
-    }
-}
+#include "../GiaDien/GiaDien.h"
 
 ChiSoDien NhapChiSoDien() {
     int num;
@@ -47,18 +16,22 @@ ChiSoDien NhapChiSoDien() {
         return chi_so;
     }
 
-    printf("Nhap vao ngay chot dien: ");
-    if (NhapSo(&chi_so.ngay_chot_chi_so) == -1) {
-        chi_so.ky_thu_phi = ky_loi;
-        printf("Nhap that bai");
-        return chi_so;
+    for (int i = 0; i < 12; i++) {
+        printf("Nhap vao ngay chot dien %d: ", i+1);
+        if (NhapSo(&chi_so.ngay_chot_chi_so[i]) == -1) {
+            chi_so.ky_thu_phi = ky_loi;
+            printf("Nhap that bai");
+            return chi_so;
+        }
     }
 
-    printf("Nhap vao chi so dien: ");
-    if (NhapSo(&chi_so.chi_so_dien) == -1) {
-        chi_so.ky_thu_phi = ky_loi;
-        printf("Nhap that bai");
-        return chi_so;
+    for (int i = 0; i < 12; i++) {
+        printf("Nhap vao chi so dien ky %d: ", i+1);
+        if (NhapSo(&chi_so.chi_so_dien[i]) == -1) {
+            chi_so.ky_thu_phi = ky_loi;
+            printf("Nhap that bai");
+            return chi_so;
+        }
     }
 
     printf("Nhap vao cac so ky: ");
@@ -77,7 +50,7 @@ ChiSoDien NhapChiSoDien() {
     return chi_so;
 }
 
-int LuuFile(ChiSoDien *chi_so, int n, char ten_file[]) {
+int LuuFileChiSoDien(ChiSoDien *chi_so, int n, char ten_file[]) {
     FILE *file = fopen(ten_file, "wb");
 
     if (fwrite(&n, sizeof(int), 1, file) != 1) {
@@ -95,7 +68,7 @@ int LuuFile(ChiSoDien *chi_so, int n, char ten_file[]) {
     return 0;
 }
 
-int DocFile(char ten_file[], ChiSoDien **chi_so) {
+int DocFileKhachHang(char ten_file[], ChiSoDien **chi_so) {
     int n;
     FILE *file;
 
@@ -125,3 +98,24 @@ int DocFile(char ten_file[], ChiSoDien **chi_so) {
     fclose(file);
     return n;
 }
+
+int KiemTraKyHopLe(int thang) {
+    if (thang <= 0 || thang > 12) {
+        return 0;
+    }
+
+    return 1;
+}
+
+int TinhDienNangTieuThu(ChiSoDien *chi_so, int ma_khach_hang, int thang) {
+    if (KiemTraKyHopLe(thang)) {
+        printf("Nhap vao thang khong dung");
+        return -1;
+    }
+
+    if (thang == ky1) {
+        return
+    }
+
+}
+

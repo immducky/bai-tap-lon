@@ -67,4 +67,3 @@ int DocFile (char ten_file[], GiaDien **dien_nang_TT) {
     fclose(fileG);
     return 0;
 }
-
