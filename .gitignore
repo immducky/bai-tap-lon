@@ -52,10 +52,17 @@ Mkfile.old
 dkms.conf
 
 #cmake
-CMake*
-cmake*
+cmake-build-debug/
+CMakeFiles/
+CMakeCache.txt
+KhachHang/KhachHang
+ChiSoDien/ChiSoDien
+GiaDien/GiaDien
+Utils/Utils
+cmake_install.cmake
+
 EVKey/
 
 #bin file
-Test.bin
-TestWrite.bin
+*/Test.bin
+*/TestWrite.bin
