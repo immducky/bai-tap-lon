@@ -50,3 +50,12 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#cmake
+CMake*
+cmake*
+EVKey/
+
+#bin file
+Test.bin
+TestWrite.bin
