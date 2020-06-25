@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang
+CMAKE_SOURCE_DIR = /home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang
+CMAKE_BINARY_DIR = /home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/CMakeFiles /home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang/CMakeFiles /home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/KhachHang/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/KhachHang/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,32 +177,32 @@ KhachHang_test.c.s:
 	$(MAKE) -f CMakeFiles/KhachHang.dir/build.make CMakeFiles/KhachHang.dir/KhachHang_test.c.s
 .PHONY : KhachHang_test.c.s
 
-home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.o: home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.o
+home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.o: home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.o
 
-.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.o
+.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.o
 
 # target to build an object file
-home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.o:
-	$(MAKE) -f CMakeFiles/KhachHang.dir/build.make CMakeFiles/KhachHang.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.o
-.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.o
+home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.o:
+	$(MAKE) -f CMakeFiles/KhachHang.dir/build.make CMakeFiles/KhachHang.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.o
+.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.o
 
-home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.i: home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.i
+home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.i: home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.i
 
-.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.i
+.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.i
 
 # target to preprocess a source file
-home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.i:
-	$(MAKE) -f CMakeFiles/KhachHang.dir/build.make CMakeFiles/KhachHang.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.i
-.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.i
+home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.i:
+	$(MAKE) -f CMakeFiles/KhachHang.dir/build.make CMakeFiles/KhachHang.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.i
+.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.i
 
-home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.s: home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.s
+home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.s: home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.s
 
-.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.s
+.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.s
 
 # target to generate assembly for a file
-home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.s:
-	$(MAKE) -f CMakeFiles/KhachHang.dir/build.make CMakeFiles/KhachHang.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.s
-.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.c.s
+home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.s:
+	$(MAKE) -f CMakeFiles/KhachHang.dir/build.make CMakeFiles/KhachHang.dir/home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.s
+.PHONY : home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.c.s
 
 # Help Target
 help:
@@ -219,9 +219,9 @@ help:
 	@echo "... KhachHang_test.o"
 	@echo "... KhachHang_test.i"
 	@echo "... KhachHang_test.s"
-	@echo "... home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.o"
-	@echo "... home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.i"
-	@echo "... home/haxerl/project/Dai_hoc_bk/KTLT/bai-tap-lon/Utils/Utils.s"
+	@echo "... home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.o"
+	@echo "... home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.i"
+	@echo "... home/haxerl/project/Dai_hoc_bk/KTLT/bai_tap_lon/bai-tap-lon/Utils/Utils.s"
 .PHONY : help
 
 

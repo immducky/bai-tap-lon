@@ -80,7 +80,7 @@ int DocFileKhachHang(char ten_file[], KhachHang **kh) {
 
 int BoSungKhachHang(KhachHang *kh, size_t n, char ten_file[]) {
     KhachHang *KH_tu_file = calloc(0, sizeof(KhachHang));
-    int size = DocFile(ten_file, &KH_tu_file);
+    int size = DocFileKhachHang(ten_file, &KH_tu_file);
     if (size == -1) {
         printf("Khong doc duoc du lieu tu file\n");
         return -1;
@@ -99,7 +99,7 @@ int BoSungKhachHang(KhachHang *kh, size_t n, char ten_file[]) {
         KH_tu_file[i] = kh[i - size];
     }
     size += n;
-    if (LuuFile(KH_tu_file, size, ten_file) == -1) {
+    if (LuuFileKhachHang(KH_tu_file, size, ten_file) == -1) {
         printf("Loi khong luu duoc vao file\n");
         return -1;
     }
@@ -111,7 +111,7 @@ int BoSungKhachHang(KhachHang *kh, size_t n, char ten_file[]) {
 int XoaKhachHangKhoiFile(int ma_khach_hang, char ten_file[]) {
     int pos = -1;
     KhachHang *kh = calloc(0, sizeof(KhachHang));
-    int size = DocFile(ten_file, &kh);
+    int size = DocFileKhachHang(ten_file, &kh);
     if (size == -1) {
         printf("Loi khi doc file\n");
         free(kh);
@@ -134,7 +134,7 @@ int XoaKhachHangKhoiFile(int ma_khach_hang, char ten_file[]) {
     }
     size--;
 
-    if (LuuFile(kh, size, ten_file) == -1) {
+    if (LuuFileKhachHang(kh, size, ten_file) == -1) {
         printf("Khong Luu vao file duoc\n");
         free(kh);
         return -1;
@@ -145,9 +145,10 @@ int XoaKhachHangKhoiFile(int ma_khach_hang, char ten_file[]) {
 }
 
 int SuaChuaKhachHang(int ma_khach_hang, char ten_file[] ,KhachHang kh) {
+    int pos = -1;
     kh.ma_khach_hang = ma_khach_hang;
     KhachHang *file_khach_hang = (KhachHang*)calloc(0, sizeof(KhachHang));
-    int size = DocFile(ten_file, &file_khach_hang);
+    int size = DocFileKhachHang(ten_file, &file_khach_hang);
     if (size == -1) {
         printf("Loi doc file\n");
         free(file_khach_hang);
@@ -160,9 +161,20 @@ int SuaChuaKhachHang(int ma_khach_hang, char ten_file[] ,KhachHang kh) {
         return -1;
     }
 
-    file_khach_hang[ma_khach_hang-1] = kh;
+    for (int i = 0; i < size; i++) {
+        if (file_khach_hang[i].ma_khach_hang == ma_khach_hang) {
+            pos = i;
+        }
+    }
 
-    if (LuuFile(file_khach_hang, size, ten_file) == -1) {
+    if (pos == -1) {
+        printf("Khach hang khong ton tai");
+        return -1;
+    }
+
+    file_khach_hang[pos] = kh;
+
+    if (LuuFileKhachHang(file_khach_hang, size, ten_file) == -1) {
         printf("Khong Luu vao file duoc\n");
         free(file_khach_hang);
         return -1;

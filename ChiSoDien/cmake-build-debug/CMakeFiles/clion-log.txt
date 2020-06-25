@@ -1,4 +1,0 @@
-Cannot generate into E:\bai_tap_lon\src\bai-tap-lon\ChiSoDien
-It is already used for project \home\haxerl\project\Dai_hoc_bk\KTLT\bai-tap-lon\ChiSoDien
-
-Please either delete it manually or select another generation directory
