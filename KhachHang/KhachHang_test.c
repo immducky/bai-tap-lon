@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "KhachHang.h"
+#include <conio.h>
 
 int main(void)
 {
@@ -15,20 +16,21 @@ int main(void)
         } while(kh[i].ma_khach_hang == -1);
     }
 
-    if (LuuFile(kh, n, "./TestWrite.bin") == -1) {
+    if (LuuFile(kh, n, "TestWrite.bin") == -1) {
         printf("Loi luu file");
         return -1;
     }
 
     KhachHang *docKH = calloc(1, sizeof *docKH);
-    if (DocFile("./Test.bin", &docKH) == -1) {
-        printf("Loi doc file");
+    if (DocFile("Test.bin", &docKH) == -1) {
+        printf("Loi doc file\n");
         return -1;
     }
 
     printf("Ma so khach hang thu nhat la: %d\n", docKH[0].ma_khach_hang);
     printf("Ten khach hang thu 2 la: %s\n", docKH[1].ten);
 
+    printf("Bo sung khach hang \n");
     KhachHang *bo_sung = calloc(2, sizeof *bo_sung);
     for (int i = 0; i < n; i++) {
         do{
@@ -43,14 +45,16 @@ int main(void)
         return -1;
     }
 
+    printf("Xoa khach hang");
+
     if (XoaKhachHangKhoiFile(1, "TestWrite.bin") == -1) {
         printf("Loi khi xoa khach hang khoi file\n");
         return -1;
     }
 
     KhachHang khach_hang_moi;
-    strcpy(khach_hang_moi.ten, "Day la ten them vao");
-    strcpy(khach_hang_moi.dia_chi, "day la dia chi them vao");
+    strcpy(khach_hang_moi.ten, "Day la ten sua chua");
+    strcpy(khach_hang_moi.dia_chi, "day la dia chi sua chua");
     khach_hang_moi.ma_cong_to = 1;
     if (SuaChuaKhachHang(2, "TestWrite.bin", khach_hang_moi) == -1) {
         printf("Loi khi xoa khach hang khoi file\n");

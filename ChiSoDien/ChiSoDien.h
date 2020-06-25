@@ -2,7 +2,7 @@
 #define ChiSoDien_H
 #define MAXSTR 100
 
-enum ky{ky1, ky2, ky3, ky4, ky5, ky6, ky7, ky8, ky9, ky10, ky11, ky12, ky_loi};
+enum ky{ky1 = 1, ky2, ky3, ky4, ky5, ky6, ky7, ky8, ky9, ky10, ky11, ky12};
 
 typedef struct {
     int ma_khach_hang;

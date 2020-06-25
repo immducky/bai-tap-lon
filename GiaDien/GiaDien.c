@@ -37,20 +37,21 @@ int LuuFile(GiaDien *dien_nang_TT, int n, char ten_file[]) {
     return 0;
 }
 
-int DocFile(char ten_file[], GiaDien **dien_nang_TT, int *n) {
+int DocFile (char ten_file[], GiaDien **dien_nang_TT) {
+    int n;
     FILE *fileG;
 
     fileG = fopen(ten_file, "rb");
     if (fileG == NULL) {
-        printf("Loi mo file");
+        printf("Loi mo file\n");
         return -1;
     }
-    if (fread(&n, sizeof(*n), 1, fileG) != 1) {
-        printf("Loi mo file");
+    if (fread(&n, sizeof(n), 1, fileG) != 1) {
+        printf("Loi mo file.1");
         return -1;
     }
 
-    GiaDien *temp = realloc(*dien_nang_TT, *n * sizeof(GiaDien));
+    GiaDien *temp = realloc(*dien_nang_TT,n * sizeof(GiaDien));
     if (temp != NULL) {
         *dien_nang_TT = temp;
     } else {
@@ -58,7 +59,7 @@ int DocFile(char ten_file[], GiaDien **dien_nang_TT, int *n) {
         free(*dien_nang_TT);
         exit(1);
     }
-    if (fread(*dien_nang_TT, sizeof(GiaDien), *n, fileG) != *n) {
+    if (fread(*dien_nang_TT, sizeof(GiaDien), n, fileG) != n) {
         printf("");
         return -1;
     }

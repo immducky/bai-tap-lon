@@ -9,7 +9,7 @@ KhachHang NhapKhachHang() {
     KhachHang kh;
     kh.ma_khach_hang = -1;
 
-    printf("Nhap vao ten khac hang: ");
+    printf("Nhap vao ten khach hang: ");
     fgets(kh.ten, 100, stdin);
 
     printf("Nhap vao dia chi khach hang: ");
@@ -31,7 +31,7 @@ int LuuFileKhachHang(KhachHang *kh, size_t size, char ten_file[]) {
     FILE *fp = fopen(ten_file, "wb");
 
     if (fwrite(&size, sizeof(size_t), 1, fp) != 1) {
-        perror("Loi Nhap vao khac hang: ");
+        perror("Loi Nhap vao khach hang: ");
         fclose(fp);
         return -1;
     }
@@ -108,7 +108,8 @@ int BoSungKhachHang(KhachHang *kh, size_t n, char ten_file[]) {
     return 0;
 }
 
-int XoaKhachHangKhoiFile(int pos, char ten_file[]) {
+int XoaKhachHangKhoiFile(int ma_khach_hang, char ten_file[]) {
+    int pos = -1;
     KhachHang *kh = calloc(0, sizeof(KhachHang));
     int size = DocFile(ten_file, &kh);
     if (size == -1) {
@@ -117,13 +118,18 @@ int XoaKhachHangKhoiFile(int pos, char ten_file[]) {
         return -1;
     }
 
-    if (pos >= size || pos <= 0) {
-        printf("Vi tri khong ton tai\n");
-        free(kh);
+    for (int i = 0; i < size; i++) {
+        if (kh[i].ma_khach_hang == ma_khach_hang) {
+            pos = i;
+        }
+    }
+
+    if (pos == -1) {
+        printf("Khach hang khong ton tai");
         return -1;
     }
 
-    for (int i = pos - 1; i < size - 1; i++) {
+    for (int i = pos; i < size; i++) {
         kh[i] = kh[i+1];
     }
     size--;
