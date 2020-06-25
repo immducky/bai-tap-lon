@@ -50,3 +50,22 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#cmake
+cmake-build-debug/
+CMakeFiles/
+CMakeCache.txt
+KhachHang/KhachHang
+ChiSoDien/ChiSoDien
+GiaDien/GiaDien
+Utils/Utils
+cmake_install.cmake
+
+EVKey/
+
+#bin file
+*/Test.bin
+*/TestWrite.bin
+
+.idea
+.gdb_history
