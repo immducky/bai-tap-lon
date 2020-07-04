@@ -14,14 +14,14 @@ int main(void)
         } while(kh[i].ma_khach_hang == -1);
     }
 
-    if (LuuFile(kh, n, "./TestWrite.bin") == -1) {
+    if (LuuFileChiSoDien(kh, n, "./TestWrite.bin") == -1) {
         printf("Loi luu file\n");
         return 0;
     }
 
     int size;
     ChiSoDien *docKH = calloc(0, sizeof *docKH);
-    size = DocFile("./Test.bin", &docKH);
+    size = DocFileChiSoDien("./Test.bin", &docKH);
     if (size == -1) {
         printf("Loi doc file");
         return 0;

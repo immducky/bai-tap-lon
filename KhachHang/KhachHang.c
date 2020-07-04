@@ -108,8 +108,30 @@ int BoSungKhachHang(KhachHang *kh, size_t n, char ten_file[]) {
     return 0;
 }
 
+int TimViTriKhachHang(KhachHang *kh, int size, int ma_khach_hang) {
+    int mid;
+    int left = 0;
+    int right = size - 1;
+    while (left <= right) {
+        mid = left + (right - left) / 2;
+
+        if (kh[mid].ma_khach_hang == ma_khach_hang) {
+            return mid;
+        }
+
+        if (kh[mid].ma_khach_hang < ma_khach_hang) {
+            left = mid + 1;
+            continue;
+        }
+
+        right = mid - 1;
+    }
+
+    return -1;
+}
+
 int XoaKhachHangKhoiFile(int ma_khach_hang, char ten_file[]) {
-    int pos = -1;
+    int pos;
     KhachHang *kh = calloc(0, sizeof(KhachHang));
     int size = DocFileKhachHang(ten_file, &kh);
     if (size == -1) {
@@ -118,14 +140,9 @@ int XoaKhachHangKhoiFile(int ma_khach_hang, char ten_file[]) {
         return -1;
     }
 
-    for (int i = 0; i < size; i++) {
-        if (kh[i].ma_khach_hang == ma_khach_hang) {
-            pos = i;
-        }
-    }
-
+    pos = TimViTriKhachHang(kh, size, ma_khach_hang);
     if (pos == -1) {
-        printf("Khach hang khong ton tai");
+        printf("Khong tim thay  khach hang");
         return -1;
     }
 
@@ -145,7 +162,7 @@ int XoaKhachHangKhoiFile(int ma_khach_hang, char ten_file[]) {
 }
 
 int SuaChuaKhachHang(int ma_khach_hang, char ten_file[] ,KhachHang kh) {
-    int pos = -1;
+    int pos;
     kh.ma_khach_hang = ma_khach_hang;
     KhachHang *file_khach_hang = (KhachHang*)calloc(0, sizeof(KhachHang));
     int size = DocFileKhachHang(ten_file, &file_khach_hang);
@@ -161,14 +178,9 @@ int SuaChuaKhachHang(int ma_khach_hang, char ten_file[] ,KhachHang kh) {
         return -1;
     }
 
-    for (int i = 0; i < size; i++) {
-        if (file_khach_hang[i].ma_khach_hang == ma_khach_hang) {
-            pos = i;
-        }
-    }
-
+    pos = TimViTriKhachHang(file_khach_hang, size, ma_khach_hang);
     if (pos == -1) {
-        printf("Khach hang khong ton tai");
+        printf("Khong tim thay  khach hang");
         return -1;
     }
 
