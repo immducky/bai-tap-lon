@@ -32,7 +32,6 @@ int main(void)
     printf("Ten khach hang thu 2 la: %d\n", docKH[1].ma_khach_hang);
 
     free(docKH);
-
     free(kh);
     return 0;
 }

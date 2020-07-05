@@ -195,3 +195,16 @@ int SuaChuaKhachHang(int ma_khach_hang, char ten_file[] ,KhachHang kh) {
     free(file_khach_hang);
     return 0;
 }
+
+int LayMaKhachHang() {
+    return MaKhachHang;
+}
+
+int DatMaKhachHang(int ma_khach_hang) {
+    if (ma_khach_hang <= MaKhachHang) {
+        return -1;
+    }
+    MaKhachHang = ma_khach_hang;
+
+    return 0;
+}
