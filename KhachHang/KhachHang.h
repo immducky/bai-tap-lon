@@ -29,4 +29,8 @@ int XoaKhachHangKhoiFile(int ma_khach_hang, char ten_file[]);
 
 int SuaChuaKhachHang(int ma_khach_hang, char ten_file[] ,KhachHang kh);
 
+int LayMaKhachHang();
+
+int DatMaKhachHang(int ma_khach_hang);
+
 #endif /* end of include guard */

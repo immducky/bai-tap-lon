@@ -41,13 +41,14 @@ ChiSoDien NhapChiSoDien() {
         return chi_so;
     }
 
-    if (num < 1 || num > 12) {
+    if (num < 0 || num > 12) {
         chi_so.ky_thu_phi = ky_loi;
         printf("Nhap that bai\n");
         return chi_so;
     }
 
     chi_so.ky_thu_phi = num;
+
     return chi_so;
 }
 
