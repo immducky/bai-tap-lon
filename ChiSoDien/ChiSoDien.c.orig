@@ -34,7 +34,11 @@ ChiSoDien NhapChiSoDien() {
         }
     }
 
+<<<<<<< HEAD
     printf("Nhap vao ky thu phi: ");
+=======
+    printf("Nhap vao so ky: ");
+>>>>>>> edf441e21d8c177e1911e01868af177bb9dc07c6
     if (NhapSo(&num) == -1) {
         chi_so.ky_thu_phi = ky_loi;
         printf("Nhap that bai\n");

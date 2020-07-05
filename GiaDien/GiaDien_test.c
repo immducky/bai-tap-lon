@@ -17,7 +17,7 @@ int main(void)
     printf("Gia cua muc tieu thu dien bac 1: %d", dien_nang_TT[0].don_gia);
     printf("\n");
 
-    int size = LuuFile(dien_nang_TT, n, "./TestWrite.bin");
+    int size = LuuFileGiaDien(dien_nang_TT, n, "./TestWrite.bin");
     if (size == -1) {
         perror("Loi luu file\n");
         return 0;
