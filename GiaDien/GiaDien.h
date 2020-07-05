@@ -11,7 +11,16 @@ typedef struct {
 
 
 int NhapGiaDien();
-int LuuFile(GiaDien *dien_nang_TT, int n, char ten_file[]);
-int DocFile(char ten_file[], GiaDien **dien_nang_TT);
+
+int LuuFileGiaDien(GiaDien *dien_nang_TT, int n, char ten_file[]);
+int DocFileGiaDien(char ten_file[], GiaDien **dien_nang_TT);
+int BoSungGiaDien(GiaDien *dien_nang_TT, size_t n, char ten_file[]);
+
+int XoaGiaDienKhoiFile(int dien_nang_TT, char ten_file[]);
+
+int SuaChuaGiaDien(int ma_khach_hang, char ten_file[], GiaDien dien_nang_TT);
+
+int TinhTienDien(int ma_khach_hang, int thang);
+
 
 #endif /* end of include guard */
