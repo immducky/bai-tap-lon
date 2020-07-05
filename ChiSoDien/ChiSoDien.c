@@ -17,7 +17,7 @@ ChiSoDien NhapChiSoDien() {
     }
 
     for (int i = 0; i < 12; i++) {
-        printf("Nhap vao ngay chot dien %d: ", i+1);
+        printf("Nhap vao ngay chot dien thang %d: ", i+1);
         if (NhapSo(&chi_so.ngay_chot_chi_so[i]) == -1) {
             chi_so.ky_thu_phi = ky_loi;
             printf("Nhap that bai");

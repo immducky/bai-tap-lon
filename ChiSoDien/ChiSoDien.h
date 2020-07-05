@@ -27,6 +27,4 @@ int XoaChiSoDienKhoiFile(int ma_khach_hang, char ten_file[]);
 
 int SuaChuaChiSoDien(int ma_khach_hang, char ten_file[] ,ChiSoDien chi_so);
 
-enum ky DoiSoThanhKy(int thang);
-
 #endif /* end of include guard */
