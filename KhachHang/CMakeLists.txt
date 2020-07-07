@@ -7,3 +7,5 @@ include_directories(.)
 include_directories(../Utils)
 
 add_executable(KhachHang KhachHang_test.c KhachHang.c ../Utils/Utils.c)
+
+target_link_libraries(BaiTapLon m)

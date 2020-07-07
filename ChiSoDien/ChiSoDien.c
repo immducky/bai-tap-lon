@@ -4,32 +4,17 @@
 #include "../Utils/Utils.h"
 #include "../GiaDien/GiaDien.h"
 
-ChiSoDien NhapChiSoDien() {
+ChiSoDien NhapChiSoDien(int ma_khach_hang) {
     int num;
     enum ky ky_thu_phi;
     ChiSoDien chi_so;
 
-    printf("Nhap vao ma so khach hang: ");
-    if (NhapSo(&chi_so.ma_khach_hang) == -1) {
-        chi_so.ky_thu_phi = ky_loi;
-        printf("Nhap that bai");
-        return chi_so;
-    }
-
+    chi_so.ma_khach_hang = ma_khach_hang;
     for (int i = 0; i < 12; i++) {
         printf("Nhap vao ngay chot dien thang %d: ", i+1);
         if (NhapSo(&chi_so.ngay_chot_chi_so[i]) == -1) {
             chi_so.ky_thu_phi = ky_loi;
             printf("Nhap that bai");
-            return chi_so;
-        }
-    }
-
-    for (int i = 0; i < 12; i++) {
-        printf("Nhap vao chi so dien ky %d: ", i+1);
-        if (NhapSo(&chi_so.chi_so_dien[i]) == -1) {
-            chi_so.ky_thu_phi = ky_loi;
-            printf("Nhap that bai\n");
             return chi_so;
         }
     }
@@ -48,11 +33,29 @@ ChiSoDien NhapChiSoDien() {
     }
 
     chi_so.ky_thu_phi = num;
+
+    printf("Nhap vao chi so dien ky truoc: ");
+    if (NhapSo(&chi_so.chi_so_dien[num-2]) == -1) {
+        chi_so.ky_thu_phi = ky_loi;
+        printf("Nhap that bai\n");
+        return chi_so;
+    }
+
+    printf("Nhap vao chi so dien ky nay: ");
+    if (NhapSo(&chi_so.chi_so_dien[num-1]) == -1) {
+        chi_so.ky_thu_phi = ky_loi;
+        printf("Nhap that bai\n");
+        return chi_so;
+    }
     return chi_so;
 }
 
 int LuuFileChiSoDien(ChiSoDien *chi_so, int n, char ten_file[]) {
     FILE *file = fopen(ten_file, "wb");
+    if (file == NULL) {
+        printf("Khong doc duoc file");
+        return -1;
+    }
 
     if (fwrite(&n, sizeof(int), 1, file) != 1) {
         printf("Loi luu do dai mang\n");
@@ -75,11 +78,11 @@ int DocFileChiSoDien(char ten_file[], ChiSoDien **chi_so) {
 
     file = fopen(ten_file, "rb");
     if (file == NULL) {
-        printf("");
+        printf("khong doc duoc file");
         return -1;
     }
     if (fread(&n, sizeof(n), 1, file) != 1) {
-        printf("");
+        printf("khong doc duoc file");
         return -1;
     }
 
@@ -92,7 +95,7 @@ int DocFileChiSoDien(char ten_file[], ChiSoDien **chi_so) {
         *chi_so = temp;
     }
     if (fread(*chi_so, sizeof(ChiSoDien), n, file) != n) {
-        printf("Loi khi viet vao chi_o");
+        printf("Loi khi doc chi so\n");
         return -1;
     }
 
@@ -168,7 +171,7 @@ int XoaChiSoDienKhoiFile(int ma_khach_hang, char ten_file[]) {
         return -1;
     }
 
-    for (int i = pos; i < size; i++) {
+    for (int i = pos; i < size-1; i++) {
         chi_so[i] = chi_so[i+1];
     }
     size--;
@@ -231,8 +234,8 @@ int TinhDienNangTieuThu(char ten_file[], int ma_khach_hang, int thang) {
     int pos;
     int dien_nang_TT;
 
-    if (KiemTraKyHopLe(thang)) {
-        printf("Nhap vao thang khong dung");
+    if (!KiemTraKyHopLe(thang)) {
+        printf("Nhap vao thang khong dung\n");
         return -1;
     }
 
@@ -251,11 +254,66 @@ int TinhDienNangTieuThu(char ten_file[], int ma_khach_hang, int thang) {
     }
 
     if (thang-1 == ky1) {
+        dien_nang_TT = chi_so[pos].chi_so_dien[0];
         free(chi_so);
-        return chi_so[pos].chi_so_dien[0];
+        return dien_nang_TT;
     }
 
     dien_nang_TT = chi_so[pos].chi_so_dien[thang-1] - chi_so[pos].chi_so_dien[thang-2];
     free(chi_so);
     return dien_nang_TT;
 }
+
+int TimKyThuPhi(int ma_khach_hang, char ten_file[]) {
+    int vi_tri;
+    enum ky ky_thu_phi;
+
+    ChiSoDien *file_khach_hang = (ChiSoDien*)calloc(0, sizeof(ChiSoDien));
+    int size = DocFileChiSoDien(ten_file, &file_khach_hang);
+    if (size == -1) {
+        printf("Loi doc file\n");
+        free(file_khach_hang);
+        return -1;
+    }
+
+    vi_tri = TimViTriChiSoDien(file_khach_hang, size, ma_khach_hang);
+    if (vi_tri == -1) {
+        printf("Khong tim thay vi tri khac hang\n");
+        free(file_khach_hang);
+        return -1;
+    }
+
+    ky_thu_phi = file_khach_hang->ky_thu_phi;
+    free(file_khach_hang);
+    return ky_thu_phi;
+}
+
+int TimChiSoDien(char ten_file[], int ma_khach_hang, ChiSoDien *kh) {
+    int pos;
+    ChiSoDien *file_chi_so = (ChiSoDien*)calloc(0, sizeof(ChiSoDien));
+
+    int size = DocFileChiSoDien(ten_file, &file_chi_so);
+    if (size == -1) {
+        printf("Loi doc file\n");
+        free(file_chi_so);
+        return -1;
+    }
+
+    if (ma_khach_hang >= size || ma_khach_hang <= 0) {
+        printf("Vi tri khong ton tai\n");
+        free(file_chi_so);
+        return -1;
+    }
+
+    pos = TimViTriChiSoDien(file_chi_so, size, ma_khach_hang);
+    if (pos == -1) {
+        printf("Khong tim thay  khach hang");
+        free(file_chi_so);
+        return -1;
+    }
+
+    *kh = file_chi_so[pos];
+    free(file_chi_so);
+    return 0;
+}
+
