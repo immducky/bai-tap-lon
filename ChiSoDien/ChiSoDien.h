@@ -19,7 +19,7 @@ int BoSungChiSoDien(ChiSoDien *chi_so, size_t n, char ten_file[]);
 int XoaChiSoDienKhoiFile(int ma_khach_hang, char ten_file[]);
 int SuaChuaChiSoDien(int ma_khach_hang, char ten_file[] ,ChiSoDien chi_so);
 
-int TinhDienNangTieuThu(char ten_file[], int ma_khach_hang, int thang);
+int TinhDienNangTieuThu(char ten_file[], int ma_khach_hang);
 int TimKyThuPhi(int ma_khach_hang, char ten_file[]);
 int TimChiSoDien(char ten_file[], int ma_khach_hang, ChiSoDien *chi_so);
 
