@@ -244,7 +244,7 @@ int TimChiSoDien(char ten_file[], int ma_khach_hang, ChiSoDien *kh) {
         return -1;
     }
 
-    if (ma_khach_hang >= size || ma_khach_hang <= 0) {
+    if (ma_khach_hang > size || ma_khach_hang <= 0) {
         printf("Vi tri khong ton tai\n");
         free(file_chi_so);
         return -1;
