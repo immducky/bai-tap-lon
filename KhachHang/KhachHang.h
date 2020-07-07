@@ -15,7 +15,7 @@ KhachHang NhapKhachHang();
  * @detail Luu struct vao file voi do dai size
  * @return tra ve 0 neu khong co loi va -1 neu viec luu bi loi
  */
-int LuuFileKhachHang(KhachHang *kh, size_t size, char ten_file[]);
+int LuuFileKhachHang(KhachHang *kh, int n, char ten_file[]);
 
 /*
  * @detail doc tu ten file roi viet vao heap khach hang da duoc malloc truoc
@@ -23,10 +23,10 @@ int LuuFileKhachHang(KhachHang *kh, size_t size, char ten_file[]);
  */
 int DocFileKhachHang(char ten_file[], KhachHang **kh);
 
-int BoSungKhachHang(KhachHang *kh, size_t n, char ten_file[]);
-
+int BoSungKhachHang(KhachHang *kh, int n, char ten_file[]);
 int XoaKhachHangKhoiFile(int ma_khach_hang, char ten_file[]);
-
 int SuaChuaKhachHang(int ma_khach_hang, char ten_file[] ,KhachHang kh);
+
+int TimKhachHang(char ten_file[], int ma_khach_hang, KhachHang *kh);
 
 #endif /* end of include guard */

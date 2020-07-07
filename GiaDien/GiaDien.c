@@ -6,17 +6,17 @@
 int NhapGiaDien(GiaDien **dien_nang_TT) {
     GiaDien *dien_nang_TT_temp = *dien_nang_TT;
     enum Bac bac;
-    const char *SoBac[] = {"", "1", "2", "3", "4", "5", "6"};
-    const char *MucTieuThu[] = {"", "0 - 50", "51 - 100", "101 - 200", "201 - 300", "301 - 400", "> 400"};
+    const char *SoBac[] = {"1", "2", "3", "4", "5", "6"};
+    const char *MucTieuThu[] = {"0 - 50", "51 - 100", "101 - 200", "201 - 300", "301 - 400", "> 400"};
     for (bac = Bac_1; bac <= Bac_6; bac++){
         printf("Nhap vao don gia cua bac %s (%s)kWh:", bac[SoBac], bac[MucTieuThu]);
-        if (NhapSo(&dien_nang_TT_temp->don_gia) == -1) {
+        if (NhapThapPhan(&dien_nang_TT_temp->don_gia[bac]) == -1) {
             perror("Nhap that bai");
             return -1;
         }
     }
 
-    return dien_nang_TT_temp->don_gia;
+    return 0;
 }
 
 int LuuFileGiaDien(GiaDien *dien_nang_TT, int n, char ten_file[]) {
@@ -135,7 +135,7 @@ int XoaGiaDienKhoiFile(int bac, char ten_file[]) {
         return -1;
     }
 
-    for (int i = pos; i < size; i++) {
+    for (int i = pos; i < size-1; i++) {
         dien_nang_TT[i] = dien_nang_TT[i+1];
     }
     size--;
@@ -184,4 +184,31 @@ int SuaChuaGiaDien(int bac, char ten_file[] ,GiaDien dien_nang_TT) {
 
     free(file_gia_dien);
     return 0;
+}
+
+int TinhTienDien(char ten_file[], int dien_nang_TT) {
+    GiaDien *file_gia_dien = (GiaDien*)calloc(0, sizeof(GiaDien));
+    int size = DocFileGiaDien(ten_file, &file_gia_dien);
+    int result = 0;
+    if (size == -1) {
+        printf("Loi doc file\n");
+        free(file_gia_dien);
+        return -1;
+    }
+
+    if (dien_nang_TT == 0) {
+        return 0;
+    }
+
+    if (dien_nang_TT <= 100) {
+        int vi_tri_gia_dien = (dien_nang_TT - 1) / 50;
+        result = file_gia_dien->don_gia[vi_tri_gia_dien] * dien_nang_TT;
+        free(file_gia_dien);
+        return result;
+    }
+
+    int vi_tri_gia_dien = (dien_nang_TT - 1) / 100;
+    result = file_gia_dien->don_gia[vi_tri_gia_dien + 1] * dien_nang_TT;
+    free(file_gia_dien);
+    return result;
 }
