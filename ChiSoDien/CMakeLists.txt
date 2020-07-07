@@ -7,3 +7,5 @@ include_directories(.)
 include_directories(../Utils)
 
 add_executable(ChiSoDien ChiSoDien.c ChiSoDien_test.c ../Utils/Utils.c)
+
+target_link_libraries(ChiSoDien m)

@@ -8,7 +8,7 @@ int main(void)
     ChiSoDien *kh = calloc(n, sizeof *kh);
     for (int i = 0; i < n; i++) {
         do{
-            kh[i] = NhapChiSoDien();
+            kh[i] = NhapChiSoDien(i+1);
             printf("So ma khach hang la: %d\n", kh[i].ma_khach_hang);
             printf("\n");
         } while(kh[i].ma_khach_hang == -1);
@@ -30,6 +30,7 @@ int main(void)
     printf("So luong doc duoc la: %d\n", size);
     printf("Ma so khach hang thu nhat la: %d\n", docKH[0].ma_khach_hang);
     printf("Ten khach hang thu 2 la: %d\n", docKH[1].ma_khach_hang);
+    printf("Ky thu phi tim duoc la: %d\n", TimKyThuPhi(1, "./Test.bin"));
 
     free(docKH);
     free(kh);
