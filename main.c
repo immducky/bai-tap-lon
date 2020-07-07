@@ -15,7 +15,7 @@ int LuuHoaDon(int ma_khach_hang) {
     }
 
     int thang_thu_phi = TimKyThuPhi(ma_khach_hang, "./CSDIEN.bin");
-    int dien_nang_TT = TinhDienNangTieuThu("./CSDIEN.bin", ma_khach_hang, thang_thu_phi);
+    int dien_nang_TT = TinhDienNangTieuThu("./CSDIEN.bin", ma_khach_hang);
     int tien_dien = TinhTienDien("./GIADIEN.bin", dien_nang_TT);
     fprintf(hoa_don, "%d \t %d \t %d \t %d\n", ma_khach_hang, thang_thu_phi, dien_nang_TT, tien_dien);
 
@@ -37,7 +37,7 @@ int InRaHoaDon(int ma_khach_hang) {
         return -1;
     }
 
-    while (fgets(str, 100, stdin) != NULL) {
+    while (fgets(str, 100, file_hoa_don) != NULL) {
         sscanf(str, "%d %d %d %d", &MKH, &thang_thu_phi, &dien_nang_TT, &tien_dien);
         if (MKH == ma_khach_hang) {
             flag = true;
@@ -186,6 +186,7 @@ void hienThiMenu(int choice) {
             while (nhapKH() == -1) {
                 printf("Nhap khach hang sai xin hay nhap lai\n");
             }
+            printf("\n");
             break;
         case 2:
             while (true) {
@@ -200,6 +201,7 @@ void hienThiMenu(int choice) {
                 chinhSuaFileKhachHang(choice2);
                 break;
             }
+            printf("\n");
             break;
         case 3:
             printf("Nhap vao ma so khach hang: ");
@@ -207,6 +209,7 @@ void hienThiMenu(int choice) {
                 printf("Nhap sai xin hay nhap lai\n");
             }
             LuuHoaDon(ma_khach_hang);
+            printf("\n");
             break;
         case 4:
             printf("Nhap vao ma so khach hang: ");
@@ -214,6 +217,7 @@ void hienThiMenu(int choice) {
                 printf("Nhap sai so xin hay nhap lai\n");
             }
             InRaHoaDon(ma_khach_hang);
+            printf("\n");
             break;
         case 5:
             while (NhapGiaDien(&gia_dien) == -1) {
@@ -233,6 +237,7 @@ void hienThiMenu(int choice) {
                 chinhSuaFileKhachHang(choice2);
                 break;
             }
+            printf("\n");
             break;
         case 7:
             break;
