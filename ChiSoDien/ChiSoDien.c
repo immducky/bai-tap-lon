@@ -200,7 +200,7 @@ int SuaChuaChiSoDien(int ma_khach_hang, char ten_file[] ,ChiSoDien chi_so) {
         return -1;
     }
 
-    if (ma_khach_hang >= size || ma_khach_hang <= 0) {
+    if (ma_khach_hang > size || ma_khach_hang <= 0) {
         printf("Vi tri khong ton tai\n");
         free(file_khach_hang);
         return -1;
