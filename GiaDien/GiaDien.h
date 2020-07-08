@@ -15,8 +15,8 @@ int LuuFileGiaDien(GiaDien *dien_nang_TT, int n, char ten_file[]);
 int DocFileGiaDien(char ten_file[], GiaDien **dien_nang_TT);
 
 int BoSungGiaDien(GiaDien *dien_nang_TT, size_t n, char ten_file[]);
-int XoaGiaDienKhoiFile(int dien_nang_TT, char ten_file[]);
-int SuaChuaGiaDien(int ma_khach_hang, char ten_file[], GiaDien dien_nang_TT);
+int XoaGiaDienKhoiFile(int bac, char ten_file[]);
+int SuaChuaGiaDien(int bac, char ten_file[], GiaDien dien_nang_TT);
 
 int TinhTienDien(char ten_file[], int dien_nang_TT);
 

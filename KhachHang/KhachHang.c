@@ -15,13 +15,8 @@ KhachHang NhapKhachHang() {
     printf("Nhap vao dia chi khach hang: ");
     fgets(kh.dia_chi, 100, stdin);
 
-    printf("Nhap vao so cong to: ");
-    if (NhapSo(&kh.ma_cong_to) == -1) {
-        perror("Nhap that bai: ");
-        return kh;
-    };
-
     kh.ma_khach_hang = MaKhachHang;
+    kh.ma_cong_to = MaKhachHang;
     MaKhachHang++;
 
     return kh;
@@ -173,7 +168,7 @@ int SuaChuaKhachHang(int ma_khach_hang, char ten_file[] ,KhachHang kh) {
         return -1;
     }
 
-    if (ma_khach_hang >= size || ma_khach_hang <= 0) {
+    if (ma_khach_hang > size || ma_khach_hang <= 0) {
         printf("Vi tri khong ton tai\n");
         free(file_khach_hang);
         return -1;
@@ -208,7 +203,7 @@ int TimKhachHang(char ten_file[], int ma_khach_hang, KhachHang *kh) {
         return -1;
     }
 
-    if (ma_khach_hang >= size || ma_khach_hang <= 0) {
+    if (ma_khach_hang > size || ma_khach_hang <= 0) {
         printf("Vi tri khong ton tai\n");
         free(file_khach_hang);
         return -1;
@@ -224,4 +219,8 @@ int TimKhachHang(char ten_file[], int ma_khach_hang, KhachHang *kh) {
     *kh = file_khach_hang[pos];
     free(file_khach_hang);
     return 0;
+}
+
+void DatMaKhachHang(int n) {
+    MaKhachHang = n;
 }

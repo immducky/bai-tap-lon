@@ -128,7 +128,7 @@ int XoaGiaDienKhoiFile(int bac, char ten_file[]) {
         return -1;
     }
 
-    pos = TimViTriBac(dien_nang_TT, size, bac);
+    pos = TimViTriBac(dien_nang_TT, size, bac - 1);
     if (pos == -1) {
         printf("Khong tim thay vi tri bac");
         free(dien_nang_TT);
@@ -161,13 +161,13 @@ int SuaChuaGiaDien(int bac, char ten_file[] ,GiaDien dien_nang_TT) {
         return -1;
     }
 
-    if (bac >= size || bac <= 0) {
+    if (bac > size || bac <= 0) {
         printf("Vi tri khong ton tai\n");
         free(file_gia_dien);
         return -1;
     }
 
-    pos = TimViTriBac(file_gia_dien, size, bac);
+    pos = TimViTriBac(file_gia_dien, size, bac - 1);
     if (pos == -1) {
         printf("Khong tim thay vi tri cua bac");
         free(file_gia_dien);

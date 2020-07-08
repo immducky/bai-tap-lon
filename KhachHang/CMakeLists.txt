@@ -8,4 +8,4 @@ include_directories(../Utils)
 
 add_executable(KhachHang KhachHang_test.c KhachHang.c ../Utils/Utils.c)
 
-target_link_libraries(BaiTapLon m)
+target_link_libraries(KhachHang m)
