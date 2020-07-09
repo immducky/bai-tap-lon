@@ -26,13 +26,13 @@ int LuuFileKhachHang(KhachHang *kh, int n, char ten_file[]) {
     FILE *fp = fopen(ten_file, "wb");
 
     if (fwrite(&n, sizeof(int), 1, fp) != 1) {
-        printf("Loi Nhap vao khac hang\n");
+        printf("Loi Nhap vao khach hang\n");
         fclose(fp);
         return -1;
     }
 
     if (fwrite(kh, sizeof(KhachHang), n, fp) != n) {
-        printf("Loi Nhap vao khac hang\n");
+        printf("Loi Nhap vao khach hang\n");
         fclose(fp);
         return -1;
     }

@@ -12,10 +12,21 @@ int LuuHoaDon(int ma_khach_hang) {
         printf("khong doc duoc file hoa don\n");
         return -1;
     }
-
     int thang_thu_phi = TimKyThuPhi(ma_khach_hang, "./CSDIEN.bin");
+    if (thang_thu_phi == -1) {
+        printf("Loi tim ky thu phi");
+        return -1;
+    }
     int dien_nang_TT = TinhDienNangTieuThu("./CSDIEN.bin", ma_khach_hang);
+    if (dien_nang_TT == -1) {
+        printf("Loi khi tinh dien nang tieu thu");
+        return -1;
+    }
     int tien_dien = TinhTienDien("./GIADIEN.bin", dien_nang_TT);
+    if (tien_dien == -1) {
+        printf("Loi tinh tien dien\n");
+        return -1;
+    }
     fprintf(hoa_don, "%d \t %d \t %d \t %d\n", ma_khach_hang, thang_thu_phi, dien_nang_TT, tien_dien);
 
     fclose(hoa_don);
@@ -30,7 +41,7 @@ int InRaHoaDon(int ma_khach_hang) {
     char str[100];
     char *result = calloc(1000, sizeof *result);
 
-    FILE *file_hoa_don = fopen("./HOADON.txt", "r");
+    FILE *file_hoa_don = fopen("./HOADON.txt", "r+");
     if (file_hoa_don == NULL) {
         printf("Khong mo duoc file hoa don\n");
         return -1;
@@ -63,7 +74,7 @@ int InRaHoaDon(int ma_khach_hang) {
     printf("Ten khach hang: %s", kh.ten);
     printf("Dia chi khach hang: %s", kh.dia_chi);
     printf("Ma cong to: %d\n", kh.ma_khach_hang);
-    printf("Ky thu phi: thang %d\n", chi_so.ky_thu_phi + 1);
+    printf("Ky thu phi: thang %d\n", chi_so.ky_thu_phi);
     if (chi_so.ky_thu_phi == 1) {
         printf("Tu ngay: 0");
     } else {
@@ -76,7 +87,7 @@ int InRaHoaDon(int ma_khach_hang) {
     printf("Tong cong tien hang: %d\n", tien_dien + tien_dien / 10);
 
     BienDoiTienThanhChu(tien_dien + tien_dien / 10, result);
-    printf("So tien viet bang chu: %s\n", result);
+    printf("So tien viet bang chu: %s\n ", result);
 
     fclose(file_hoa_don);
     free(result);
@@ -167,6 +178,7 @@ void chinhSuaFileKhachHang(int choice) {
                 printf("sua chua chi so dien that bai\n");
                 return;
             }
+            printf("Sua chua thanh cong \n");
             break;
         case 2:
             printf("nhap vao ma khach hang: ");
@@ -196,7 +208,7 @@ void chinhSuaFileKhachHang(int choice) {
                     printf("\n");
 
                     printf("Nhap vao chi so dien cua khach hang %d\n", i+1);
-                    chi_so[i] = NhapChiSoDien(i+1);
+                    chi_so[i] = NhapChiSoDien(kh[i].ma_khach_hang);
                     printf("\n");
 
                 } while(kh[i].ma_khach_hang == -1);
@@ -206,6 +218,7 @@ void chinhSuaFileKhachHang(int choice) {
             BoSungChiSoDien(chi_so, n, "./CSDIEN.bin");
             free(kh);
             free(chi_so);
+            printf("Them thanh cong\n");
             break;
         default:
             printf("Khong co lua chon do\n");
@@ -264,7 +277,7 @@ void hienThiMenu(int choice) {
             LuuFileGiaDien(gia_dien, 6, "GIADIEN.bin");
             break;
         case 6:
-            printf("Nhap vao bac can chinh: ");
+            printf("Nhap vao bac can chinh sua: ");
             NhapSo(&bac);
 
             printf("Nhap vao don gia cho bac %d: ", bac);
@@ -273,6 +286,7 @@ void hienThiMenu(int choice) {
             gia_dien_moi.don_gia[bac] = don_gia;
 
             SuaChuaGiaDien(bac, "./GIADIEN.bin", gia_dien_moi);
+            printf("Sua gia dien thanh cong");
             printf("\n");
             break;
         case 7:

@@ -46,8 +46,8 @@ int DocFileGiaDien(char ten_file[], GiaDien **dien_nang_TT) {
         printf("Loi mo file\n");
         return -1;
     }
-    if (fread(&n, sizeof(n), 1, fileG) != 1) {
-        printf("Loi mo file.1");
+    if (fread(&n, sizeof(int), 1, fileG) != 1) {
+        printf("Loi mo file\n");
         return -1;
     }
 
@@ -60,7 +60,7 @@ int DocFileGiaDien(char ten_file[], GiaDien **dien_nang_TT) {
         exit(1);
     }
     if (fread(*dien_nang_TT, sizeof(GiaDien), n, fileG) != n) {
-        printf("");
+        printf("Loi doc file");
         return -1;
     }
 
@@ -187,9 +187,9 @@ int SuaChuaGiaDien(int bac, char ten_file[] ,GiaDien dien_nang_TT) {
 }
 
 int TinhTienDien(char ten_file[], int dien_nang_TT) {
+    int result = 0;
     GiaDien *file_gia_dien = (GiaDien*)calloc(0, sizeof(GiaDien));
     int size = DocFileGiaDien(ten_file, &file_gia_dien);
-    int result = 0;
     if (size == -1) {
         printf("Loi doc file\n");
         free(file_gia_dien);
@@ -203,6 +203,7 @@ int TinhTienDien(char ten_file[], int dien_nang_TT) {
     if (dien_nang_TT <= 100) {
         int vi_tri_gia_dien = (dien_nang_TT - 1) / 50;
         result = file_gia_dien->don_gia[vi_tri_gia_dien] * dien_nang_TT;
+        printf("don gia: %d", file_gia_dien->don_gia[vi_tri_gia_dien]);
         free(file_gia_dien);
         return result;
     }

@@ -169,7 +169,7 @@ int XoaChiSoDienKhoiFile(int ma_khach_hang, char ten_file[]) {
 
     pos = TimViTriChiSoDien(chi_so, size, ma_khach_hang);
     if (pos == -1) {
-        printf("Khong tim thay vi tri khac hang");
+        printf("Khong tim thay vi tri khach hang");
         free(chi_so);
         return -1;
     }
@@ -208,7 +208,7 @@ int SuaChuaChiSoDien(int ma_khach_hang, char ten_file[] ,ChiSoDien chi_so) {
 
     pos = TimViTriChiSoDien(file_khach_hang, size, ma_khach_hang);
     if (pos == -1) {
-        printf("Khong tim thay vi tri khac hang");
+        printf("Khong tim thay vi tri khach hang");
         free(file_khach_hang);
         return -1;
     }
@@ -252,7 +252,7 @@ int TimChiSoDien(char ten_file[], int ma_khach_hang, ChiSoDien *kh) {
 
     pos = TimViTriChiSoDien(file_chi_so, size, ma_khach_hang);
     if (pos == -1) {
-        printf("Khong tim thay  khach hang");
+        printf("Khong tim thay khach hang");
         free(file_chi_so);
         return -1;
     }
@@ -303,7 +303,7 @@ int TimKyThuPhi(int ma_khach_hang, char ten_file[]) {
 
     vi_tri = TimViTriChiSoDien(file_khach_hang, size, ma_khach_hang);
     if (vi_tri == -1) {
-        printf("Khong tim thay vi tri khac hang\n");
+        printf("Khong tim thay vi tri khach hang\n");
         free(file_khach_hang);
         return -1;
     }
